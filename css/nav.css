@@ -1,0 +1,166 @@
+.header{
+  height: 95%;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 85px;
+  margin-bottom: -85px;
+  background-image: url('../images/codebackground.jpg');
+  background-size: 100% 120%;
+  background-position: center;
+  color: white;
+}
+.header h1{
+  margin-top: 200px;
+
+}
+.nav-wrap{
+  position: relative;
+  height: 52px;
+  width: 100%;
+  margin: 25px auto;
+  background: transparent;
+  background-position: -150%;
+  position: fixed !important;
+  top:0;
+
+  z-index: 999999;
+  animation: borderStretch 6s;
+}
+.nav-wrap:hover{
+  box-shadow: 5px 10px 10px 2px black;
+  background: white;
+}
+.navbar{
+  padding: 10px;
+  display: inline-block !important;
+  width: 100%;
+  height: 75px !important;
+  background: transparent;
+  border-bottom:none;
+  overflow: hidden;
+}
+
+.navbar a{
+  padding: 10px;
+  font-size: 25px;
+  text-decoration: none;
+
+}
+.no-stick a{
+  color: rgb(255,255,255,1);
+}
+
+#navLogo{
+  width: 0px;
+}
+.navLogo{
+  animation: displayLogo 6s;
+  width: 8%;
+  opacity: 0.2;
+}
+.sticky{
+  position: fixed !important;
+  top:0;
+  animation: collapseAnimation 6s;
+  background-color: rgb(28, 35, 51,0.4);
+}
+.sticky a{
+    color: rgb(255,255,255,0.3);
+    animation: anchorFade 6s;
+}
+.sticky:hover{
+  background-color:rgb(28, 35, 51);
+  color: white;
+}
+.sticky:hover img{
+  opacity: 1;
+}
+.sticky:hover a{
+  color: white;
+}
+/* animations */
+
+@keyframes anchorFade{
+  0%{
+    color: white;
+  }
+  90%{
+    color: white;
+  }
+}
+@keyframes displayLogo{
+  0%{
+    width: 0px;
+    transform: translateX(-500px) rotate(-5deg);
+  }
+  2%{
+    margin-left: 100px;
+    width: 8%;
+    opacity: 1;
+  }
+  10%{
+    transform: rotate(-20deg);
+  }
+  12%{
+    transform: rotate(10deg);
+  }
+  15%{
+    transform: rotate(-15deg);
+  }
+  20%{
+    transform: rotate(5deg);
+  }
+  25%{
+    margin-left: 100px;
+    transform: translateX(10px);
+  }
+  35%{
+    margin-left: 0px;
+    transform: translateX(0px);
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+@keyframes borderStretch{
+  0%{
+    width: 0px;
+    background:linear-gradient(45deg,white,white,silver,black,silver,white,white,white,white,white,white,silver,black,silver,white,white );
+    box-shadow: 5px 10px 10px 2px black;
+  }
+  60%{
+    width: 600%;
+  }
+  85%{
+    box-shadow: 5px 10px 10px 2px black;
+    background:linear-gradient(45deg,white,white,silver,black,silver,white,white,white,white,white,white,silver,black,silver,white,white );
+  }
+  90%{
+    background: transparent;
+  }
+  100%{
+
+  }
+}
+@keyframes collapseAnimation{
+  0%{
+    background-image: url('../images/codebackground.jpg');
+    background: rgb(28, 35, 51);
+    color: white !important;
+  }
+  50%{
+    background-image: none;
+    background: rgb(28, 35, 51);
+  }
+  90%{
+    background: rgb(28, 35, 51);
+    color: white  !important;
+  }
+  100%{
+      background-color: rgb(28, 35, 51,0.3);
+      color: rgb(255,255,255,0.3)  !important;
+  }
+}

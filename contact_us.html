@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Travis Baker Coding Co - Contact Us</title>
+    <link rel="icon" href="images/TBCClogo_transparent.png"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="css/contact_us.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css"/>
+  </head>
+  <body>
+    <!-- nav -->
+    <div class='header main-color' id='header'>
+      <h1>Contact us</h1>
+    </div>
+    <div id='nav-wrap'>
+      <nav class='navbar no-stick' id='navbar'>
+        <img id='navLogo' src="images/TBCClogo.png" alt="">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="payment.html">Payments</a>
+      </nav>
+    </div>
+    <!-- end of nav -->
+
+    <div class='main main-color from-left' id="form">
+      <h1>Questions? Comments... Concerns!</h1>
+      <h1>We would love to hear from you!</h1>
+      <h3>Please send us an email</h3>
+      <hr/>
+      <div class="content">
+        <div class="container" >
+          <form action="mailto:travisbakercoding@gmail.com?subject=TBCC: Inquiry" method="post" enctype="text/plain" target="_blank">
+            <div class="flex-container">
+              <div class='left'>
+                <div class="fieldBox" id='fName'>
+                  <label for="fname">First Name</label>
+                  <input type="text" name="firstname" placeholder="Your first name..">
+                </div>
+                <div class="fieldBox" id='lName'>
+                  <label for="lname">Last Name</label>
+                  <input type="text"  name="lastname" placeholder="Your last name..">
+                </div>
+                <div class="fieldBox" id='email'>
+                  <label for="lname">Email</label>
+                  <input type="email"  name="senderEmail" placeholder="example@email.com" >
+                </div>
+                <div class="fieldBox" id='timeZone'>
+                  <label for="country">Time Zone</label>
+                  <select name="timezone_offset" id="timezone-offset" class="span5">
+                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                    <option value="-10:00">(GMT -10:00) Hawaii</option>
+                    <option value="-09:50">(GMT -9:30) Taiohae</option>
+                    <option value="-09:00">(GMT -9:00) Alaska</option>
+                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                    <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                    <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                    <option value="-04:50">(GMT -4:30) Caracas</option>
+                    <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                    <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                    <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                    <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                    <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                    <option value="+00:00" selected="selected">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                    <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                    <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                    <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                    <option value="+03:50">(GMT +3:30) Tehran</option>
+                    <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                    <option value="+04:50">(GMT +4:30) Kabul</option>
+                    <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                    <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                    <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                    <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                    <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                    <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                    <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                    <option value="+08:75">(GMT +8:45) Eucla</option>
+                    <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                    <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                    <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                    <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                    <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                    <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                    <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                    <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                    <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                    <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+                  </select>
+                </div>
+              </div>
+              <div class='space'></div>
+              <div class="right">
+                <label for="subject" class="subject">Subject</label>
+                <br/>
+                <textarea id="subject" name="subject" placeholder="Write a short summary of what you are looking for.."></textarea>
+              </div>
+            </div>
+            <div class="buttonArea">
+              <input type="submit" value="Submit" class="submitButton">
+            </div>
+          </form>
+        </div> <!-- end containers -->
+
+        <hr/>
+
+        <div class="moreInfo flex-container">
+          <div class='infoText'>
+            <h1>More Info</h1>
+            <p id="info" class='textA'>
+              We would love to create an app or webpage for you or help you to build your own!
+              Before you contact us please check out the
+              <a href="about.html">about section</a>
+              to learn more about what we are all about and the
+              <a href="projects.html">
+                Projects Page
+              </a>
+              to check out previous apps we have made in the past.
+            </p>
+            <p class="textA small">*Prices may vary based on request*</p>
+          </div>
+
+          <div class = "profilePic">
+            <img src="images/travis.jpg" alt="picture of travis baker">
+            <p class='small'>Travis Baker</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src='navbar.js'></script>
+  </body>
+</html>

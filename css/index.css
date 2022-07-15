@@ -1,0 +1,39 @@
+.carousel-inner{
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.service-text{
+  padding-left: 10%;
+  margin-top: 25px;
+}
+#vertical-hr{
+  width: 1px;
+  height: 200px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+.vertical-hr{
+  animation: growVline 2s;
+}
+
+#language-carousel{
+  padding: 30px;
+  color: white;
+}
+#language-carousel img{
+  /* height: 150px; */
+  width: 40%;
+  margin: 30px;
+}
+#python{
+  margin-right: 20%;
+}
+#js{
+  margin-left: 10%
+}
+#micro-bit{
+  margin-right:5%;
+}
+
+/* aniamtions*/

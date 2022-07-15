@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href='pig_latin.css'/>
+
+  </head>
+  <body>
+    <h1>Pig Latin Translator</h1>
+    <h4>Type something in and it will be translated for you</h4>
+    <input id='textBox' type='text'/>
+    <input type='submit' id='submitButton' class='button'/>
+    <input type="button" value="RULES" class='button' id='rulesButton'/>
+    <div class="respArea">
+      <div id='wordBox'>elloHay ereThay</div>
+    </div>
+
+    <div class="pig">
+      <div class="ears">
+          <div class="earL ear pig-color">
+            <div class="earHole earHoleL"></div>
+          </div>
+          <div class="earR ear pig-color">
+            <div class="earHole earHoleR"></div>
+          </div>
+      </div>
+      <div class="pighead pig-color">
+        <div class="eyeL eye">
+          <div class="pupil eyePupL" id='leftEye'>
+          </div>
+        </div>
+        <div class="eyeR eye">
+          <div class="pupil eyePupR" id='rightEye'>
+          </div>
+        </div>
+        <div class="nose">
+          <div class="nostril nostrilL"></div>
+          <div class="nostril nostrilR"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src='pig_latin.js'></script>
+  </body>
+</html>

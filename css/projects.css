@@ -1,0 +1,47 @@
+.flex-container{
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+.project-box{
+  position: relative;
+  border: 2px solid #4e97e1;
+  background-size: 250px 250px;
+  margin: 15px;
+}
+.project-box:hover{
+  border: none;
+  transform: translateY(10px);
+}
+.box{
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+
+}
+.info-box{
+  position:absolute;
+  color: transparent;
+}
+.info-box:hover{
+  background-color: rgb(0,0,0,0.7);
+  border: 2px solid #325680;
+  color: white;
+}
+.inner-info{
+  padding: 15px;
+}
+
+/* projects */
+#joelsclinic{
+  background-image: url('../images/joelsclinic.png')
+}
+#collision-tech{
+  background-image: url('../images/collisiontech.png')
+}
+#cloud-culture{
+  background-image: url('../images/cloud.jpg')
+}
+/* lessons */
+#pig-latin{
+  background-image: url('../images/pig.PNG')
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Travis Baker Coding Co - Contact Us</title>
+    <link rel="icon" href="images/TBCClogo_transparent.png"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="css/payment.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css"/>
+  </head>
+  <body>
+    <!-- nav -->
+    <div class='header main-color' id='header'>
+      <h1>Make a Payment</h1>
+    </div>
+    <div id='nav-wrap'>
+      <nav class='navbar no-stick' id='navbar'>
+        <img id='navLogo' src="images/TBCClogo.png" alt="">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="payment.html">Payments</a>
+      </nav>
+    </div>
+    <!-- end of nav -->
+    <!-- paypal -->
+    <div class='main main-color from-right'>
+      <!-- <div id="paypal-button-container"></div> -->
+      <div id="smart-button-container">
+        <div style="text-align: center"><label for="description">Name</label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+          <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+        <div style="text-align: center"><label for="amount">USD$</label><input name="amountInput" type="number" id="amount" value="" ></div>
+          <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+        <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+          <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+        <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+      </div>
+    </div> <!-- end paypal -->
+  </body>
+  <script src="https://www.paypal.com/sdk/js?client-id=ASkFOEOWEXiGnSA2qvgDppFG7cOscci6mFSK_yMEe-GhLGcrRq3bGkoGajz_Lys8G1FEGtAw1ti-sspO&currency=USD&intent=capture&enable-funding=venmo" data_source="integrationbuilder"></script>
+
+  <script>
+    const fundingSources = [
+      paypal.FUNDING.PAYPAL,
+        paypal.FUNDING.VENMO,
+        paypal.FUNDING.CARD
+      ]
+
+    for (const fundingSource of fundingSources) {
+      const paypalButtonsComponent = paypal.Buttons({
+        fundingSource: fundingSource,
+
+        // optional styling for buttons
+        // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+        style: {
+          shape: 'pill',
+          height: 40,
+        },
+
+        // set up the transaction
+        createOrder: (data, actions) => {
+          // pass in any options from the v2 orders create call:
+          // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+          const createOrderPayload = {
+            purchase_units: [
+              {
+                amount: {
+                  value: '88.44',
+                },
+              },
+            ],
+          }
+
+          return actions.order.create(createOrderPayload)
+        },
+
+        // finalize the transaction
+        onApprove: (data, actions) => {
+          const captureOrderHandler = (details) => {
+            const payerName = details.payer.name.given_name
+            console.log('Transaction completed!')
+          }
+
+          return actions.order.capture().then(captureOrderHandler)
+        },
+
+        // handle unrecoverable errors
+        onError: (err) => {
+          console.error(
+            'An error prevented the buyer from checking out with PayPal',
+          )
+        },
+      })
+
+      if (paypalButtonsComponent.isEligible()) {
+        paypalButtonsComponent
+          .render('#paypal-button-container')
+          .catch((err) => {
+            console.error('PayPal Buttons failed to render')
+          })
+      } else {
+        console.log('The funding source is ineligible')
+      }
+    }
+  </script>
+</html>

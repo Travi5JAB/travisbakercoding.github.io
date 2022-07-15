@@ -1,0 +1,11 @@
+.fields{
+  display: flex;
+  margin-left: 20%;
+}
+label{
+  color: white;
+  margin-right: 5px;
+}
+input{
+  width: 200px;
+}

@@ -1,0 +1,7 @@
+.profilePic{
+  margin: 10px;
+  text-align: center;
+}
+.profilePic img{
+  border-radius: 50%;
+}
