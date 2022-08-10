@@ -88,8 +88,21 @@ input:focus{
 .footer{
   border-top: 3px solid #4e97e1;
   box-shadow: -1px -1px 20px 2px #000000;
-  padding-top: 15px;
+  padding: 15px;
 }
+
+.footer .icon{
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: 30px 30px;
+  padding: 2px;
+  border: 1px solid black;
+}
+.footer .github-icon{
+  background-image: url('../images/github_icon.png')
+}
+
 
 /* aniamtions*/
 @keyframes growVline{
