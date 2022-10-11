@@ -16,11 +16,21 @@
     <h1>Our Work</h1>
   </div>
   <div id='nav-wrap'>
-    <nav class='navbar no-stick' id='navbar'>
-      <img id='navLogo' src="images/TBCClogo.png" alt="TBCC logo html self close tag with TBCC inside">
-      <a href="index.html">Home</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="payment.html">Payments</a>
+    <nav class='tbcc-navbar no-stick' id='navbar'>
+      <img id='navLogo' src="images/TBCClogo.png" alt="TBCC Logo self closing html tag with TBCC inside">
+      <div class='anchors'>
+        <a href="index.html">Home</a>
+        <!-- <a href="schedule.html">Schedule</a> -->
+        <a href="payment.html">Payments</a>
+        <div class=nav-dropdown>
+          <a href='#nav-wrap'>Services˅</a>
+          <ul class="nav-dropdown-options">
+            <li><a href='classes.html'>Classes</a></li>
+            <li><a href="websites.html">Build a Website</a></li>
+            <li><a href="webmanagment.html">Manage my site</a></li>
+          </ul>
+        </div>
+    </div>
     </nav>
   </div>
   <!-- end of nav -->
@@ -108,15 +118,5 @@
     <h3>More Coming Soon...</h3>
   </div>
 
-    <!-- <div class="project-box box" id=''>
-      <a href='' target='_blank'>
-        <div class='info-box box'>
-          <div class='inner-info'>
-            <h4>Pname:</h4>
-            Example
-          </div>
-        </div>
-      </a>
-    </div> -->
   </body>
 </html>

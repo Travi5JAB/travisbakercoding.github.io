@@ -45,9 +45,17 @@ input:focus{
   border: 2px solid #4e97e1;
   color: #1c2333;
 }
-.main{
-  padding: 30px;
-  margin: 55px;
+@media (min-width: 600px){
+  .main{
+    padding: 30px;
+    margin: 55px;
+  }
+}
+@media (max-width: 600px){
+  .main{
+    padding: 10px;
+    margin: 20px;
+  }
 }
 .main a{
   color: #4e97e1;
@@ -62,6 +70,7 @@ input:focus{
 .textA{
   margin-left: 10px;
 }
+
 
 .from-right{
   color: white;
@@ -80,11 +89,19 @@ input:focus{
   box-shadow: 10px 15px 20px 2px #000000;
 }
 
-.flex-container{
-  display: flex;
-  margin-left: 10%;
-}
 
+@media (min-width: 600px){
+  .flex-container{
+    display: flex;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 600px){
+  .flex-container{
+    display: flex;
+    margin-left: 2%;
+  }
+}
 .footer{
   border-top: 3px solid #4e97e1;
   box-shadow: -1px -1px 20px 2px #000000;

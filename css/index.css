@@ -4,36 +4,51 @@
 }
 
 .service-text{
-  padding-left: 10%;
+  padding-left: 2%;
   margin-top: 25px;
 }
-#vertical-hr{
-  width: 1px;
-  height: 200px;
-  margin-left: 50px;
-  margin-right: 20px;
-}
-.vertical-hr{
-  animation: growVline 2s;
+#services-fade h2{
+  border-right: 1px solid white;
+  padding-right: 2%;
+  margin-right: 2%;
 }
 
-#language-carousel{
-  padding: 30px;
-  color: white;
-}
-#language-carousel img{
-  /* height: 150px; */
-  width: 40%;
-  margin: 30px;
-}
-#python{
-  margin-right: 20%;
-}
-#js{
-  margin-left: 10%
-}
-#micro-bit{
-  margin-right:5%;
+@media (min-width: 650px){
+  #language-carousel{
+    padding: 30px;
+    color: white;
+  }
+  #language-carousel img{
+    width: 40%;
+    margin: 30px;
+  }
+  #python{
+    margin-right: 20%;
+  }
+  #js{
+    margin-left: 10%
+  }
+  #micro-bit{
+    margin-right:5%;
+  }
 }
 
-/* aniamtions*/
+@media (max-width: 768px){
+  #language-carousel{
+    padding: 30px;
+    color: white;
+  }
+  #language-carousel img{
+    width: 0%;
+    margin: 0px;
+  }
+  #python{
+    margin-right: 5%;
+  }
+  #js{
+    margin-left: 5%
+  }
+  #micro-bit{
+    margin-right:5%;
+  }
+}
