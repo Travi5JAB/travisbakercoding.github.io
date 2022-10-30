@@ -23,7 +23,7 @@
   position: fixed !important;
   top:0;
   animation: borderStretch 6s;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #nav-wrap, #nav-wrap a{
   z-index: 999999999999;
@@ -39,7 +39,7 @@
   background: transparent;
   border-bottom:none;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 @media (min-width: 600px){

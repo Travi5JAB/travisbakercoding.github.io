@@ -78,8 +78,17 @@
         </div>
       </div>
     </div>
+    <div class='service-text main-color main from-right'>
+      <h4 class='textQ'>Need a website built from the ground up?</h4>
+      <ul>
+        <li class='textA'>Build and manage your website</li>
+        <li class='textA'>Make changes once or manage your site regularly</li>
+        <li class='textA'>SEO optimization</li>
+        <li class='textA'>Flexable pricing options</li>
+      </ul>
+    </div>
 
-    <div class='main main-color from-right'>
+    <div class='main main-color from-left'>
       <h2>Pricing</h2>
       <p class='textA'>Prices start at $100/month</p>
       <p class='textA'>Prices very based on complexity and frequency.</p>
@@ -88,5 +97,17 @@
       <p class='textA'><a>Reach out here</a></p>
     </div>
 
+
+    <script src='navbar.js'></script>
+    <script>
+    $('.carousel').on('slide.bs.carousel', function (event) {
+      var height = $(event.relatedTarget).height();
+      var $innerCarousel = $(event.target).find('.carousel-inner');
+
+      $innerCarousel.animate({
+        height: height
+      });
+    });
+    </script>
   </body>
 </html>

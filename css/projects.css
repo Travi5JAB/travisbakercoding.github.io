@@ -3,7 +3,7 @@
   margin: 10px;
 }
 .project-box{
-  position: relative;
+  /* position: relative; */
   border: 2px solid #4e97e1;
   background-size: 250px 250px;
   margin: 15px;
@@ -19,7 +19,7 @@
 
 }
 .info-box{
-  position:absolute;
+  /* position:absolute; */
   color: transparent;
 }
 .info-box:hover{
